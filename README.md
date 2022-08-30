@@ -6,10 +6,8 @@
 | ------------------ | ------     | --------------------------     |
 | email              | string     | null: false, unique: true      |
 | encrypted_password | string     | null: false                    |
-| name               | string     | null: false                    |
 | date               | string     | null: false                    |
 | nick_name          | string     | null: false                    |
-| order              | string     | null: false                    |
 | last_name          | string     | null: false                    |
 | first_name         | string     | null: false                    |
 | lasut_name_fgn     | string     | null: false                    |
@@ -41,7 +39,7 @@
 ### Association
 
 - belongs_to :user
-- bas_one :order
+- has_one :order
 
 
 
@@ -55,18 +53,17 @@
 
 - belongs_to :item
 - belongs_to :user
-- bas_one    :address
+- has_one    :address
 
 ## addresses テーブル
 
 | Column           | Type       | Options                        |
 | ----------       | ---------- | ------------------------------ |
-| post_code        | string     | null: false                    |
-| prefecture       | string     | null: false                    |
+| prefecture_id    | integer    | null: false                    |
 | city             | string     | null: false                    |
 | house_number     | string     | null: false                    |
 | tel_number       | string     | null: false                    |
-| card_number      | string     | null: false                    |
+| building         | string     |                                |
 | order            | references | null: false  foreign_key: true |
 ### Association
 
