@@ -67,6 +67,26 @@ RSpec.describe OrderAddress, type: :model do
         @order_address.valid?
         expect(@order_address.errors.full_messages).to include('Tell number is invalid')
       end
+      it '電話番号が半角数字でなければ登録できない' do
+        @order_address.tell_number = '９1111111111'
+        @order_address.valid?
+        expect(@order_address.errors.full_messages).to include('Tell number is invalid')
+      end
+      it '都道府県が「---」では登録できない' do
+        @order_address.prefecture_id = '---'
+        @order_address.valid?
+        expect(@order_address.errors.full_messages).to include("Prefecture can't be blank")
+      end
+      it 'ユーザーが紐付いていないと出品は保存できない' do
+        @order_address.user_id = nil
+        @order_address.valid?
+        expect(@order_address.errors.full_messages).to include("User can't be blank")
+      end
+      it 'ユーザーが紐付いていないと出品は保存できない' do
+        @order_address.item_id = nil
+        @order_address.valid?
+        expect(@order_address.errors.full_messages).to include("Item can't be blank")
+      end  
     end
   end
 end
