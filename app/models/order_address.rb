@@ -2,7 +2,7 @@ class OrderAddress
   include ActiveModel::Model
   attr_accessor :post_code, :prefecture_id, :city, :house_number, :building, :tell_number, :item_id, :user_id, :token
 
-  validates :prefecture_id, numericality: { other_than: 0, message: "can't be blank" }
+  validates :prefecture_id, numericality: { other_than: 1, message: "can't be blank" }
 
   with_options presence: true do
     validates :token
