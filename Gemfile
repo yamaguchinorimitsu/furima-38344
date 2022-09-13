@@ -66,3 +66,6 @@ gem 'active_hash'
 gem 'pry-rails'
 gem 'payjp'
 gem "aws-sdk-s3", require: false
+
+# 日本語の言語
+gem 'rails-i18n'
