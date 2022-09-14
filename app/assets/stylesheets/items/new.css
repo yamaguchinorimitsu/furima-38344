@@ -227,3 +227,16 @@
 .inc {
   font-size: 13px;
 }
+
+.image-delete-button {
+  text-align: center;
+  border: solid 1px;
+  cursor: pointer;
+  margin-bottom: 5px;
+}
+
+.preview-image {
+  width: 300;
+  height: 200;
+
+}
