@@ -9,7 +9,7 @@ ja:
         last_name_fgn: 苗字（全角カナ）
         first_name_fgn: 名前（全角カナ）          
       item:
-        image: 画像
+        images: 画像
         item_name: 商品名
         price: 値段
         content: 説明
