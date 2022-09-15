@@ -236,7 +236,12 @@
 }
 
 .preview-image {
-  width: 300;
-  height: 200;
+  width: 150px;
+  height: 200px;
 
 }
+
+.item-img-content{
+  display: flex;
+}
+

@@ -18,14 +18,19 @@ document.addEventListener('DOMContentLoaded', function(){
 
     // 表示する画像を生成
     const previewImage= document.createElement('img');
+    previewImage.width = 200;
+    previewImage.height = 200;
     previewImage.setAttribute('class', 'preview-image');
     previewImage.setAttribute('src', blob);
+   
+   
+    
     
     // 削除ボタンを生成
     const deleteButton = document.createElement("div");
     deleteButton.setAttribute("class", "image-delete-button");
     deleteButton.innerText = "削除";
-
+    
      // 削除ボタンをクリックしたらプレビューとfile_fieldを削除させる
      deleteButton.addEventListener("click", () => deleteImage(dataIndex));
 
