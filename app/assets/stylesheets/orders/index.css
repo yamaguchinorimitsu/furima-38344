@@ -29,6 +29,7 @@
 }
 
 .buy-item-img {
+  display: flex;
   margin-right: 20px;
   height: 130px;
   width: 250px;

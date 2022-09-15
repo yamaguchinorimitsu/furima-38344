@@ -6,10 +6,10 @@ class Item < ApplicationRecord
   belongs_to :delivery_time
   belongs_to :prefecture
   belongs_to :user
-  has_one_attached :image
+  has_many_attached :images
   has_one :order
 
-  validates :image, presence:{ message: 'を選択してください' }
+  validates :images, length: { minimum: 1, maximum: 5, message: "は1枚以上5枚以下にしてください" }
   validates :item_name, presence: true
   validates :price, presence: true
   validates :content, presence: true

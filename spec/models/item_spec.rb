@@ -14,9 +14,9 @@ RSpec.describe Item, type: :model do
 
     context '新規出品が保存できない場合' do
       it '商品画像が空では登録できない' do
-        @item.image = nil
+        @item.images = nil
         @item.valid?
-        expect(@item.errors.full_messages).to include("画像を選択してください")
+        expect(@item.errors.full_messages).to include("画像は1枚以上5枚以下にしてください")
       end
 
       it '商品名が空では登録できない' do

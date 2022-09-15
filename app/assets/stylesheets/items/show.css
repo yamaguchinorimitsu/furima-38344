@@ -205,3 +205,25 @@
   font-weight: bold;
   font-size: 23px;
 }
+
+.image-delete-button {
+  text-align: center;
+  border: solid 1px;
+  cursor: pointer;
+  margin-bottom: 5px;
+}
+
+.other-image{
+ margin-right: 10px;
+}
+
+.other-images{
+  display: flex;
+}
+
+img {
+  height: 150px;
+  width: 150px;
+  /* 縦横比を保ったまま、画像を縦横100pxのサイズに収めるプロパティです */
+  object-fit: contain;
+}
